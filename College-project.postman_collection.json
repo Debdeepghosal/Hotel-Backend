@@ -1,0 +1,664 @@
+{
+	"info": {
+		"_postman_id": "3f5eaa6f-e1a6-4e3c-9e8a-d9fce0869663",
+		"name": "College-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19925085"
+	},
+	"item": [
+		{
+			"name": "/admin/addroom",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoiZ2hvc2FsZGViZGVlcDE2QGdtYWlsLmNvbSIsImlhdCI6MTY4MTQ1ODE4NCwiZXhwIjoxNjg0MDUwMTg0fQ.1MvtS0lmp9lx7T4-o_1R7xDoXoxuGcNFDyTRc0sBnMs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"room_no\": 1,\n    \"room_availability\": \"yes\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/addroom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"addroom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/changeRoomRate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoiZ2hvc2FsZGViZGVlcDE2QGdtYWlsLmNvbSIsImlhdCI6MTY4MTQ1ODg5NSwiZXhwIjoxNjg0MDUwODk1fQ.EDS9aQsdBN_UONu64DMMCjMQQ8wGkxY06PftEZuxo-M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"room_no\" : 19,\n    \"room_rate\" : 1700,\n    \"rate_comment\" : \"diwali special price\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/changeRoomRate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"changeRoomRate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/getRoomInfo/:room_no",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getRoomInfo/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getRoomInfo",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/getAllRooms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getAllRooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getAllRooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/getAllAvailableRooms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getAllAvailableRooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getAllAvailableRooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\" : \"deep\",\n    \"last_name\" : \"ghosal\",\n    \"email\" : \"ghosaldeep16@gmail.com\",\n    \"password\" : \"asdfgh\",\n    \"phone_no\" : 7158757879\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"ghosaldebdeep16@gmail.com\",\n    \"password\" : \"asdfgh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "/login",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/protect",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoiZ2hvc2FsZGViZGVlcDE2QGdtYWlsLmNvbSIsImlhdCI6MTY4MTQxMTg3MiwiZXhwIjoxNjg0MDAzODcyfQ.d2hePYLeTg3UyIukRg5CLTyTp2XtNO4NBUeJJPQIudU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "/protect",
+					"path": [
+						"protect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\" : \"Debdeep\",\n    \"last_name\" : \"ghosal\",\n    \"email\" : \"ghosaldebdeep16@gmail.com\",\n    \"password\" : \"asdfgh\"   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"ghosaldebdeep16@gmail.com\",\n    \"password\" : \"buntybabloo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/bookRoom/room_no",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoiZ2hvc2FsZGViZGVlcDE2QGdtYWlsLmNvbSIsImlhdCI6MTY4MTQ1NjI5MywiZXhwIjoxNjg0MDQ4MjkzfQ.Pz2gT19pwBykVmGpU43cdzSFOO28APyzNV5u0D56Wgg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"check_in\": \"2022-12-09\",\n    \"check_out\": \"2023-01-09\",\n    \"occupants\": 4,\n    \"payment_type\": \"online\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/bookRoom/19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookRoom",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/getUserInfo/room_no",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getUserInfo/19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getUserInfo",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/customerFeedback",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoiZ2hvc2FsZGViZGVlcDE2QGdtYWlsLmNvbSIsImlhdCI6MTY4MTQ1ODU1MSwiZXhwIjoxNjg0MDUwNTUxfQ.sWb2ns32rDWsx94f1Dh7id2YPhVpw7iFxRJOMqxwAKk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"feedback\":\"amazing room with clean bedsheets\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/customerFeedback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customerFeedback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/updateCheckout/:room_no",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsImVtYWlsIjoiZ2hvc2FsZGViZGVlcDE2QGdtYWlsLmNvbSIsImlhdCI6MTY4MTU4Mzk1MCwiZXhwIjoxNjg0MTc1OTUwfQ.P4tybjz-VTCQLXXYakCek6AUd6Dv5gLBkIQtKl76xek",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"actual_check_out\":\"2023-04-21\",\n    \"checkout_time\":\"12:30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/updateCheckout/19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"updateCheckout",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/addMeal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoiZ2hvc2FsZGViZGVlcDE2QGdtYWlsLmNvbSIsImlhdCI6MTY4MTQ3NjQ5NywiZXhwIjoxNjg0MDY4NDk3fQ.KynSz6gYJuK8wTQvmecPK_3Xb_f-ewwuDCFF1kMwN3Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"meal_id\" : 1,\n    \"meal_name\" : \"Fish Kabiraji\",\n    \"meal_price\" : 222\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/addMeal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"addMeal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/orderMeal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsImVtYWlsIjoiZ2hvc2FsZGViZGVlcDE2QGdtYWlsLmNvbSIsImlhdCI6MTY4MTU4Mzk1MCwiZXhwIjoxNjg0MTc1OTUwfQ.P4tybjz-VTCQLXXYakCek6AUd6Dv5gLBkIQtKl76xek",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"room_no\": 19,\n    \"meal_id\" : 1,\n    \"payment_status\" : \"unpaid\",\n    \"place\" : \"restaurant\" \n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/orderMeal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"orderMeal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/getAllMealOrdered",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImVtYWlsIjoiZ2hvc2FsZGViZGVlcDE2QGdtYWlsLmNvbSIsImlhdCI6MTY4MTU0MDkwMiwiZXhwIjoxNjg0MTMyOTAyfQ.Jl2GdodBAtR-lSjb9FdWftpA0ftoxbzYqMRV-7D63IY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/admin/getAllMealOrdered",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"getAllMealOrdered"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/changeUserProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImVtYWlsIjoiZ2hvc2FsZGViZGVlcDE2QGdtYWlsLmNvbSIsImlhdCI6MTY4MTU0MDkwMiwiZXhwIjoxNjg0MTMyOTAyfQ.Jl2GdodBAtR-lSjb9FdWftpA0ftoxbzYqMRV-7D63IY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"ghosaldebdeep16@gmail.com\",\n    \"newPassword\" : \"buntybabloo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/changeUserProfile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"changeUserProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/deleteRoom/:room_no",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImVtYWlsIjoiZ2hvc2FsZGViZGVlcDE2QGdtYWlsLmNvbSIsImlhdCI6MTY4MTU3Njk1NCwiZXhwIjoxNjg0MTY4OTU0fQ.ssn1a2OZS8O1iNXNoolLPJxqsuzUt-oj8VPUE2JTTJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/admin/deleteRoom/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"deleteRoom",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/admin/deleteMeal/:meal_id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImVtYWlsIjoiZ2hvc2FsZGViZGVlcDE2QGdtYWlsLmNvbSIsImlhdCI6MTY4MTU3Njk1NCwiZXhwIjoxNjg0MTY4OTU0fQ.ssn1a2OZS8O1iNXNoolLPJxqsuzUt-oj8VPUE2JTTJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/admin/deleteMeal/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"deleteMeal",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/deleteUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImVtYWlsIjoiZ2hvc2FsZGViZGVlcDE2QGdtYWlsLmNvbSIsImlhdCI6MTY4MTU3Njk1NCwiZXhwIjoxNjg0MTY4OTU0fQ.ssn1a2OZS8O1iNXNoolLPJxqsuzUt-oj8VPUE2JTTJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"ghosaldeep16@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/deleteUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"deleteUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
